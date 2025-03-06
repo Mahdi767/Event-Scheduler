@@ -35,5 +35,5 @@ Output: Word Count = 6
 
 ### 📧 Contact
 
-For any issues or suggestions,  [email me at](mehedi49891@gmail.com).
+For any issues or suggestions,  email me at (mehedi49891@gmail.com).
 
