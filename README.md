@@ -55,14 +55,6 @@ Birthday Party,2023-10-20,18:00,John's birthday party at his house.
 
 ---
 
-## Next Steps 🌱
-
-- Add validation for date and time input
-- Implement event editing and deletion functionality
-- Improve the user interface by displaying events in a table (`JTable`)
-
----
-
 ### 📧 Contact
 
 For any issues or suggestions, email me at (mehedi49891@gmail.com).
