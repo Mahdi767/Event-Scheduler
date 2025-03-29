@@ -1,16 +1,18 @@
-# Event Scheduler 📅
+Event Scheduler 📅
+A simple and efficient Event Scheduler built using Java Swing. This application allows users to manage and track their events, save them to a .txt or .csv file, and modify or delete them as needed.
 
-A simple and efficient **Event Scheduler** built using Java Swing. This application allows users to manage and track their events, save them to a `.txt` file, and load them back when the program starts. The application will soon be available as a **standalone `.exe` file**, meaning you can simply download and run it without needing to install Java separately.
+Features ✨
+Create, Modify, and Delete Events with details like title, description, date, time, and duration
 
-## Features ✨
+Save events as .txt or .csv files for easy backup and sharing
 
-- Add, save, and load events with details like title, date, time, and description
-- Saves events to a `.txt` file for persistence
-- Load events on startup or via a button click
-- Simple and lightweight graphical interface using Java Swing
-- Display events in a text area for easy management
-- Easy to use and suitable for managing personal or work events
-- **Standalone .exe file** (Coming Soon): No need to install Java! Just download and run the application
+Load events on startup to keep track of your schedule
+
+User-friendly graphical interface built with Java Swing
+
+Available as a .exe file – No need to install Java! Just download and run the application
+
+This scheduler is perfect for organizing personal or work-related events efficiently. 🚀
 
 ## Installation 🛠️
 
