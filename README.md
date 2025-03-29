@@ -35,30 +35,37 @@ Run the .exe file directly on your Windows machine without needing to install Ja
 ## Screenshots
 ### 1. **Main GUI Screen**  
 Upon running the application, this is the main screen that appears:  
+
 ![Main GUI Screen](https://raw.githubusercontent.com/Mahdi767/Event-Scheduler/main/Event%20Scheduler/src/Main.png)
 
 ### 2. **Adding Event Details**  
-This is how you can input event details like title, date, time, and description:  
+This is how you can input event details like title, date, time, and description: 
+
 ![Adding Event Details](https://raw.githubusercontent.com/Mahdi767/Event-Scheduler/main/Event%20Scheduler/src/data%20adding.png)
 
 ### 3. **Event Added to Table**  
 After creating an event, the data is displayed in a table:  
+
 ![Event Added to Table](https://raw.githubusercontent.com/Mahdi767/Event-Scheduler/main/Event%20Scheduler/src/added%20data.png)
 
 ### 4. **Saving as CSV/Excel/Sheets File**  
 You can save the event data as a `.csv`, `.xlsx`, or Google Sheets file:  
+
 ![Saving as CSV](https://raw.githubusercontent.com/Mahdi767/Event-Scheduler/main/Event%20Scheduler/src/Saving%20as%20.csv.png)
 
 ### 5. **Saved as CSV**  
 The event data saved in a `.csv` file:  
+
 ![Saved as CSV](https://raw.githubusercontent.com/Mahdi767/Event-Scheduler/main/Event%20Scheduler/src/saved%20as%20.csv.png)
 
 ### 6. **Saving as a Text File (.txt)**  
 The event data can also be saved as a `.txt` file:  
+
 ![Saving as TXT](https://raw.githubusercontent.com/Mahdi767/Event-Scheduler/main/Event%20Scheduler/src/saving%20as%20.txt.png)
 
 ### 7. **Saved as Text File**  
 The saved event data in a `.txt` file format:  
+
 ![Saved as TXT](https://raw.githubusercontent.com/Mahdi767/Event-Scheduler/main/Event%20Scheduler/src/saved%20as%20.txt.png)
 
 ### 📧 Contact
