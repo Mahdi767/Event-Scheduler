@@ -19,6 +19,13 @@ The .exe version is now available! 🎉 You can download it from the [EventSched
 
 Run the .exe file directly on your Windows machine without needing to install Java.
 
+**Warning**: Windows may detect the .exe file as potentially malicious. This is a false positive due to the file not being signed. If prompted, you can proceed by allowing the file to run:
+
+1. Click on **More Info**.
+2. Click on **Run Anyway** to bypass the warning and run the application.
+
+This is a common issue with files that are not signed or from unknown sources, but rest assured the file is safe to use.
+
 ### Option 2: Run the Program via IDE (For Developers)
 1. Clone the repository or download the source code.
 2. Open the project in your preferred Java IDE (e.g., IntelliJ IDEA, Eclipse).
