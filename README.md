@@ -22,7 +22,7 @@ Run the .exe file directly on your Windows machine without needing to install Ja
 ### Option 2: Run the Program via IDE (For Developers)
 1. Clone the repository or download the source code.
 2. Open the project in your preferred Java IDE (e.g., IntelliJ IDEA, Eclipse).
-3. Compile and run the `EventSchedulerApp.java` file.
+3. Compile and run the `EventScheduler.java` file from src.
 
 ## Usage 🚀
 - Run the program and enter event details like title, description, date, time, and duration.
