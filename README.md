@@ -12,9 +12,6 @@ A simple and efficient Event Scheduler built using Java Swing. This application 
 
 This scheduler is perfect for organizing personal or work-related events efficiently. 🚀
 
-## Repository Views
-![Repository Views](https://komarev.com/ghpvc/?username=Mahdi767&repo=Event-Scheduler&label=Repository+Views&color=blue&style=flat)
-
 ## Installation 🛠️
 
 ### Option 1: Run the Standalone .exe File
@@ -70,6 +67,9 @@ The event data can also be saved as a `.txt` file:
 The saved event data in a `.txt` file format:  
 
 ![Saved as TXT](https://raw.githubusercontent.com/Mahdi767/Event-Scheduler/main/Event%20Scheduler/src/saved%20as%20.txt.png)
+
+## View Counts
+![Repository Views](https://komarev.com/ghpvc/?username=Mahdi767&repo=Event-Scheduler&label=Repository+Views&color=blue&style=flat)
 
 ### 📧 Contact
 
