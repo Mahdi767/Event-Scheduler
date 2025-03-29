@@ -12,6 +12,9 @@ A simple and efficient Event Scheduler built using Java Swing. This application 
 
 This scheduler is perfect for organizing personal or work-related events efficiently. 🚀
 
+## Repository Views
+![Repository Views](https://komarev.com/ghpvc/?username=Mahdi767&repo=Event-Scheduler&label=Repository+Views&color=blue&style=flat)
+
 ## Installation 🛠️
 
 ### Option 1: Run the Standalone .exe File
