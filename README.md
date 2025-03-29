@@ -32,30 +32,35 @@ Run the .exe file directly on your Windows machine without needing to install Ja
 - Events will be displayed in a structured table for easy management.
 
 
-## Example 📌
+## Screenshots
+### 1. **Main GUI Screen**  
+   Upon running the application, this is the main screen that appears:  
+   https://github.com/Mahdi767/Event-Scheduler/blob/main/Event%20Scheduler/src/Main.png
 
-### Input:
+### 2. **Adding Event Details**  
+   This is how you can input event details like title, date, time, and description:  
+   https://github.com/Mahdi767/Event-Scheduler/blob/main/Event%20Scheduler/src/data%20adding.png
 
-```
-Event: Meeting
-Date: 2023-10-15
-Time: 10:00
-Description: Team meeting to discuss project updates.
-```
+### 3. **Event Added to Table**  
+   After creating an event, the data is displayed in a table:  
+   https://github.com/Mahdi767/Event-Scheduler/blob/main/Event%20Scheduler/src/added%20data.png
 
-### Output:
-```
-Event Added! (Will be saved to events.txt)
-```
+### 4. **Saving as CSV/Excel/Sheets File**  
+   You can save the event data as a `.csv`, `.xlsx`, or Google Sheets file:  
+   https://github.com/Mahdi767/Event-Scheduler/blob/main/Event%20Scheduler/src/Saving%20as%20.csv.png
 
-## Example of `events.txt` File 📄
+### 5. **Saved as CSV**  
+   The event data saved in a `.csv` file:  
+   https://github.com/Mahdi767/Event-Scheduler/blob/main/Event%20Scheduler/src/saved%20as%20.csv.png
 
-```
-Meeting,2023-10-15,10:00,Team meeting to discuss project updates.
-Birthday Party,2023-10-20,18:00,John's birthday party at his house.
-```
+### 6. **Saving as a Text File (.txt)**  
+   The event data can also be saved as a `.txt` file:  
+   https://github.com/Mahdi767/Event-Scheduler/blob/main/Event%20Scheduler/src/saving%20as%20.txt.png
 
----
+### 7. **Saved as Text File**  
+   The saved event data in a `.txt` file format:  
+   https://github.com/Mahdi767/Event-Scheduler/blob/main/Event%20Scheduler/src/saved%20as%20.txt.png
+
 
 ### 📧 Contact
 
