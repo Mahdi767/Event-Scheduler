@@ -9,16 +9,17 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class EventScheduler {
-    public static void main(String[] args) throws Exception {
+    public EventScheduler() {
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(800, 600);
         frame.setTitle("Event Scheduler");
         frame.setLayout(null);
         frame.setResizable(false);
+        frame.setLocationRelativeTo(null); // Center the frame on the screen
 
         JPanel backGrounfJPanel = new JPanel();
-        backGrounfJPanel.setBackground(new Color(252, 239, 232));
+        backGrounfJPanel.setBackground(new Color(250, 250, 250));
         backGrounfJPanel.setLayout(null);
         frame.setContentPane(backGrounfJPanel);
       
@@ -40,17 +41,18 @@ table.getTableHeader().setReorderingAllowed(false);
 
 
 
-table.setForeground(Color.BLACK);
+table.setForeground( new Color(44, 62, 80));
 JScrollPane scrollPane = new JScrollPane(table);
 scrollPane.setBounds(20, 20, 400, 500);
-scrollPane.getViewport().setBackground(new Color(255, 253, 209));
+scrollPane.getViewport().setBackground(new Color(236, 240, 241));
 frame.add(scrollPane);
 
 
 // Table header
 JTableHeader tableHeader = table.getTableHeader();
-tableHeader.setBackground(Color.YELLOW); // Set background color for the header
-tableHeader.setForeground(Color.BLACK);
+ // Set background color for the header
+tableHeader.setForeground(Color.WHITE);
+tableHeader.setBackground(new Color(44, 62, 80)); // Light yellow background
 // frame.add(tableHeader);
 
         JButton button1 = new JButton("Save as .txt file");
@@ -155,12 +157,80 @@ frame.add(button5);
 
 
 
+JLabel titleErrorLabel = new JLabel("Required");
+titleErrorLabel.setForeground(Color.RED);
+titleErrorLabel.setBounds(650, 50, 100, 30);
+titleErrorLabel.setVisible(false);
+frame.add(titleErrorLabel);
+
+JLabel descriptionErrorLabel = new JLabel("Required");
+descriptionErrorLabel.setForeground(Color.RED);
+descriptionErrorLabel.setBounds(650, 130, 100, 30);
+descriptionErrorLabel.setVisible(false);
+frame.add(descriptionErrorLabel);
+
+JLabel dateErrorLabel = new JLabel("Required");
+dateErrorLabel.setForeground(Color.RED);
+dateErrorLabel.setBounds(650, 210, 100, 30);
+dateErrorLabel.setVisible(false);
+frame.add(dateErrorLabel);
+
+JLabel timeErrorLabel = new JLabel("Required");
+timeErrorLabel.setForeground(Color.RED);
+timeErrorLabel.setBounds(650, 290, 100, 30);
+timeErrorLabel.setVisible(false);
+frame.add(timeErrorLabel);
+
+JLabel durationErrorLabel = new JLabel("Required");
+durationErrorLabel.setForeground(Color.RED);
+durationErrorLabel.setBounds(650, 370, 100, 30);
+durationErrorLabel.setVisible(false);
+frame.add(durationErrorLabel);
+
+
+
+JLabel createSuccessLabel = new JLabel("Event created successfully!");
+createSuccessLabel.setForeground(new Color(26, 92, 27)); // Green color for success
+createSuccessLabel.setBounds(450, 455, 200, 20); // Position above the button
+createSuccessLabel.setVisible(false); // Initially hidden
+frame.add(createSuccessLabel);
+
+JLabel deleteSuccessLabel = new JLabel("Event deleted!");
+deleteSuccessLabel.setForeground(new Color(255, 0, 51)); // Red color for delete message
+deleteSuccessLabel.setBounds(470, 525, 150, 20); // Position to the left of the "Delete Event" button
+deleteSuccessLabel.setVisible(false); // Initially hidden
+frame.add(deleteSuccessLabel);
+// Not selected
+JLabel modifyWarningLabel = new JLabel("No event selected!");
+modifyWarningLabel.setForeground(Color.RED);
+modifyWarningLabel.setBounds(620, 460, 150, 20); // Position above the button
+modifyWarningLabel.setVisible(false); // Initially hidden
+frame.add(modifyWarningLabel);
+
+// ok the event
+JLabel modifyIsOk = new JLabel("Event selected!");
+modifyIsOk.setForeground(new Color(26, 92, 27));
+modifyIsOk.setBounds(620, 460, 150, 20); // Position above the button
+modifyIsOk.setVisible(false); // Initially hidden
+frame.add(modifyIsOk);
+
+JLabel modifySuccessfully = new JLabel("Event Modified!");
+modifySuccessfully.setForeground(new Color(26, 92, 27));
+modifySuccessfully.setBounds(620, 460, 150, 20); // Position above the button
+modifySuccessfully.setVisible(false); // Initially hidden
+frame.add(modifySuccessfully);
 
 
 // Back-End create event 
 button3.addActionListener(new ActionListener() {
     @Override
     public void actionPerformed(ActionEvent e){
+        deleteSuccessLabel.setVisible(false);
+        titleErrorLabel.setVisible(false);
+        descriptionErrorLabel.setVisible(false);
+        dateErrorLabel.setVisible(false);
+        timeErrorLabel.setVisible(false);
+        durationErrorLabel.setVisible(false);
         try {
           
             String title = Fields1.getText().trim();
@@ -170,9 +240,32 @@ button3.addActionListener(new ActionListener() {
             String duration = Fields5.getText().trim();
     
             // Check if any field is empty & a warnning message
-            if (title.isEmpty() || description.isEmpty() || date.isEmpty() || time.isEmpty() || duration.isEmpty()) {
-                JOptionPane.showMessageDialog(frame, "Please fill in all fields before creating an event!", "Warning", JOptionPane.WARNING_MESSAGE);
-                return;
+            boolean hasError = false;
+
+            // Validate each field and show error messages
+            if (title.isEmpty()) {
+                titleErrorLabel.setVisible(true);
+                hasError = true;
+            }
+            if (description.isEmpty()) {
+                descriptionErrorLabel.setVisible(true);
+                hasError = true;
+            }
+            if (date.isEmpty()) {
+                dateErrorLabel.setVisible(true);
+                hasError = true;
+            }
+            if (time.isEmpty()) {
+                timeErrorLabel.setVisible(true);
+                hasError = true;
+            }
+            if (duration.isEmpty()) {
+                durationErrorLabel.setVisible(true);
+                hasError = true;
+            }
+
+            if (hasError) {
+                return; // Stop execution if there are errors
             }
     
             // Add the event details to the table
@@ -183,7 +276,13 @@ button3.addActionListener(new ActionListener() {
             Fields2.setText("");
             Fields5.setText("");
     //If successfully event can add on the table then this message will appear
-            JOptionPane.showMessageDialog(frame, "Event Created Successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
+    modifyWarningLabel.setVisible(false);
+    deleteSuccessLabel.setVisible(false);
+            modifySuccessfully.setVisible(false); // Hide success message
+            modifyIsOk.setVisible(false);
+            createSuccessLabel.setVisible(false); // Hide success message
+            createSuccessLabel.setText("Event created successfully!");
+    createSuccessLabel.setVisible(true);
     
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(frame, "An error occurred while creating the event.", "Error", JOptionPane.ERROR_MESSAGE);
@@ -261,49 +360,62 @@ button1.addActionListener(new ActionListener() {
 
 
 
+
 // modify button back-end
  int[] row_modify = {-1}; // -1 means row_modify hoy ni
-button4.addActionListener(new ActionListener() {
+ button4.addActionListener(new ActionListener() {
     @Override
     public void actionPerformed(ActionEvent e) {
-        // If no row is modified--> load selected event 
+        // Hide all error labels to ensure they don't appear unnecessarily
+       
+        titleErrorLabel.setVisible(false);
+        descriptionErrorLabel.setVisible(false);
+        dateErrorLabel.setVisible(false);
+        timeErrorLabel.setVisible(false);
+        durationErrorLabel.setVisible(false);
+
+        modifyWarningLabel.setVisible(false); // Hide the warning label initially
+
+        // If no row is modified --> load selected event
         if (row_modify[0] == -1) {
             int selected_Row = table.getSelectedRow();
-            
+
             if (selected_Row >= 0) {
                 try {
-                    
-                    Fields1.setText(model.getValueAt(selected_Row, 0).toString()); // Event Title-->get data--> fill the text fields
-                    Fields2.setText(model.getValueAt(selected_Row, 1).toString()); // Description-->get data-->fill the text fields
-                    
-                    // sameway te date
+                    // Retrieve data from the selected row and set it in the input fields
+                    Fields1.setText(model.getValueAt(selected_Row, 0).toString()); // Event Title
+                    Fields2.setText(model.getValueAt(selected_Row, 1).toString()); // Description
+
+                    // Parse and set the date
                     String dateStr = model.getValueAt(selected_Row, 2).toString();
                     java.util.Date date = dateEditor.getFormat().parse(dateStr);
                     dateSpinner.setValue(date);
-                    
-                    // taking the date
+
+                    // Parse and set the time
                     String timeStr = model.getValueAt(selected_Row, 3).toString();
-                    java.util.Date time = timeEditor.getFormat().parse(timeStr);//parse-->text er shuru theke sesh
+                    java.util.Date time = timeEditor.getFormat().parse(timeStr);
                     spinner.setValue(time);
-                    
+
+                    // Set the duration
                     Fields5.setText(model.getValueAt(selected_Row, 4).toString()); // Duration
-                    
-                    // Mark this row as--->> modified
+
+                    // Mark this row as modified
                     row_modify[0] = selected_Row;
-                    
-                    JOptionPane.showMessageDialog(frame, 
-                        "Event data loaded. Edit the fields and click 'Modify Event' again to save changes.",
-                        "Info", JOptionPane.INFORMATION_MESSAGE);
+                    button4.setText("Update Event"); // Change button text to "Save Changes"
+
+                    // Reset visibility of success and warning labels
+                    deleteSuccessLabel.setVisible(false);
+                    createSuccessLabel.setVisible(false);
+                    modifySuccessfully.setVisible(false); // Hide success message
+                    modifyIsOk.setVisible(true); // Show success message
                 } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(frame, 
-                        "Error loading event data: " + ex.getMessage(), 
-                        "Error", JOptionPane.ERROR_MESSAGE);
-                    // ex.printStackTrace();
+                    System.err.println("Error loading event data: " + ex.getMessage());
                 }
             } else {
-                JOptionPane.showMessageDialog(frame, 
-                    "Please select an event to modify!", 
-                    "Warning", JOptionPane.WARNING_MESSAGE);
+                // Show warning if no row is selected
+                deleteSuccessLabel.setVisible(false);
+                createSuccessLabel.setVisible(false);
+                modifyWarningLabel.setVisible(true);
             }
         } 
         // If a row is already modified
@@ -316,15 +428,37 @@ button4.addActionListener(new ActionListener() {
                 String duration = Fields5.getText().trim();
 
                 // Check if any field is empty
-                if (title.isEmpty() || description.isEmpty() || date.isEmpty() || 
-                    time.isEmpty() || duration.isEmpty()) {
-                    JOptionPane.showMessageDialog(frame, 
-                        "Please fill in all fields before saving changes!", 
-                        "Warning", JOptionPane.WARNING_MESSAGE);
-                    return;
-                }
+               
+                boolean hasEr = false;
 
-                // Update-->> existing row in the table
+                // Validate each field and show error messages
+                if (title.isEmpty()) {
+                    titleErrorLabel.setVisible(true);
+                    hasEr = true;
+                }
+                if (description.isEmpty()) {
+                    descriptionErrorLabel.setVisible(true);
+                    hasEr = true;
+                }
+                if (date.isEmpty()) {
+                    dateErrorLabel.setVisible(true);
+                    hasEr = true;
+                }
+                if (time.isEmpty()) {
+                    timeErrorLabel.setVisible(true);
+                    hasEr = true;
+                }
+                if (duration.isEmpty()) {
+                    durationErrorLabel.setVisible(true);
+                    hasEr = true;
+                }
+    
+                if (hasEr) {
+                    return; // Stop execution if there are errors
+                }
+            
+
+                // Update the existing row in the table
                 int row = row_modify[0];
                 model.setValueAt(title, row, 0);
                 model.setValueAt(description, row, 1);
@@ -332,20 +466,21 @@ button4.addActionListener(new ActionListener() {
                 model.setValueAt(time, row, 3);
                 model.setValueAt(duration, row, 4);
 
-                // Clear --> fields & reset --> tracker
+                // Clear the fields and reset the tracker
                 Fields1.setText("");
                 Fields2.setText("");
                 Fields5.setText("");
                 row_modify[0] = -1;
 
-                JOptionPane.showMessageDialog(frame, 
-                    "Event Modified Successfully!", 
-                    "Success", JOptionPane.INFORMATION_MESSAGE);
+                button4.setText("Modify Event");
+
+                // Reset visibility of success and warning labels
+                deleteSuccessLabel.setVisible(false);
+                createSuccessLabel.setVisible(false);
+                modifyIsOk.setVisible(false); // Hide success message
+                modifySuccessfully.setVisible(true); // Show success message
             } catch (Exception ex) {
-                JOptionPane.showMessageDialog(frame, 
-                    "Error saving modified event: " + ex.getMessage(), 
-                    "Error", JOptionPane.ERROR_MESSAGE);
-                    // ex.printStackTrace();
+                System.err.println("Error saving modified event: " + ex.getMessage());
             }
         }
     }
@@ -353,9 +488,13 @@ button4.addActionListener(new ActionListener() {
 
 
 //Back-end delete button
+
+
+
 button5.addActionListener(new ActionListener() {
     @Override
     public void actionPerformed(ActionEvent e) {
+        deleteSuccessLabel.setVisible(false);
         try {
             int selectedRow = table.getSelectedRow();
             
@@ -375,10 +514,11 @@ button5.addActionListener(new ActionListener() {
                     Fields2.setText("");
                     Fields5.setText("");
                     
-                    JOptionPane.showMessageDialog(frame, 
-                        "Event deleted successfully!", 
-                        "Success", 
-                        JOptionPane.INFORMATION_MESSAGE);
+
+                    createSuccessLabel.setVisible(false);
+                    modifySuccessfully.setVisible(false); // Hide success message
+                    modifyIsOk.setVisible(false);
+                    deleteSuccessLabel.setVisible(true);
                 }
             } else {
                 JOptionPane.showMessageDialog(frame, 
@@ -435,6 +575,7 @@ button2.addActionListener(new ActionListener() {
                 }
                 writer.write("\n");
 
+                
                 // Write the data rows
                 for (int i = 0; i < model.getRowCount(); i++) {
                     for (int j = 0; j < model.getColumnCount(); j++) {
