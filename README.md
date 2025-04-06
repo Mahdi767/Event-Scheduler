@@ -43,7 +43,7 @@ This is a common issue with files that are not signed or from unknown sources, b
 ### 1. **Main GUI Screen**  
 Upon running the application, this is the main screen that appears:  
 
-![Main GUI Screen](https://raw.githubusercontent.com/Mahdi767/Event-Scheduler/main/Event%20Scheduler/src/Main.png)
+![Main GUI Screen](https://raw.githubusercontent.com/Mahdi767/Event-Scheduler/blob/main/Event%20Scheduler/src/Main1.png)
 
 ### 2. **Adding Event Details**  
 This is how you can input event details like title, date, time, and description: 
