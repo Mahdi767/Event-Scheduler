@@ -58,12 +58,12 @@ After creating an event, the data is displayed in a table:
 ### 4. **Saving as CSV/Excel/Sheets File**  
 You can save the event data as a `.csv`, `.xlsx`, or Google Sheets file:  
 
-![Saving as CSV](https://raw.githubusercontent.com/Mahdi767/Event-Scheduler/main/Event%20Scheduler/src/Saving%20as%20.csv.png)
+![Saving as CSV](https://raw.githubusercontent.com/Mahdi767/Event-Scheduler/main/Event%20Scheduler/src/saving%20as%20.cvs.png)
 
 ### 5. **Saved as CSV**  
 The event data saved in a `.csv` file:  
 
-![Saved as CSV](https://raw.githubusercontent.com/Mahdi767/Event-Scheduler/main/Event%20Scheduler/src/saved%20as%20.csv.png)
+![Saving as CSV](https://raw.githubusercontent.com/Mahdi767/Event-Scheduler/main/Event%20Scheduler/src/saved%20as%20.cvs.png)
 
 ### 6. **Saving as a Text File (.txt)**  
 The event data can also be saved as a `.txt` file:  
