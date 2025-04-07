@@ -48,7 +48,7 @@ Upon running the application, this is the main screen that appears:
 ### 2. **Adding Event Details**  
 This is how you can input event details like title, date, time, and description: 
 
-![Adding Event Details](https://raw.githubusercontent.com/Mahdi767/Event-Scheduler/main/Event%20Scheduler/src/data%20adding.png)
+![Adding Event Details](https://raw.githubusercontent.com/Mahdi767/Event-Scheduler/main/Event%20Scheduler/src/adding%20data1.png)
 
 ### 3. **Event Added to Table**  
 After creating an event, the data is displayed in a table:  
