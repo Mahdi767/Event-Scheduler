@@ -73,7 +73,7 @@ The event data can also be saved as a `.txt` file:
 ### 7. **Saved as Text File**  
 The saved event data in a `.txt` file format:  
 
-![Saved as TXT](https://raw.githubusercontent.com/Mahdi767/Event-Scheduler/main/Event%20Scheduler/src/saved%20as%20.txt.png)
+![Saved as TXT](https://raw.githubusercontent.com/Mahdi767/Event-Scheduler/main/Event%20Scheduler/src/saved%20as%20txt.png)
 
 ## View Counts
 ![Repository Views](https://komarev.com/ghpvc/?username=Mahdi767&repo=Event-Scheduler&label=Repository+Views&color=blue&style=flat)
