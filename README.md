@@ -53,7 +53,7 @@ This is how you can input event details like title, date, time, and description:
 ### 3. **Event Added to Table**  
 After creating an event, the data is displayed in a table:  
 
-![Event Added to Table](https://raw.githubusercontent.com/Mahdi767/Event-Scheduler/main/Event%20Scheduler/src/added%20data.png)
+![Event Added to Table](https://raw.githubusercontent.com/Mahdi767/Event-Scheduler/main/Event%20Scheduler/src/added%20data1.png)
 
 ### 4. **Saving as CSV/Excel/Sheets File**  
 You can save the event data as a `.csv`, `.xlsx`, or Google Sheets file:  
