@@ -15,7 +15,7 @@ This scheduler is perfect for organizing personal or work-related events efficie
 ## Installation 🛠️
 
 ### Option 1: Run the Standalone .exe File
-The .exe version is now available! 🎉 You can download it from the [EventScheduler Release](https://github.com/Mahdi767/Event-Scheduler/releases/tag/EventScheduler) section.
+The .exe version is now available! 🎉 You can download it from the [EventScheduler Release](https://github.com/Mahdi767/Event-Scheduler/releases/tag/Event--Scheduler) section.
 
 Run the .exe file directly on your Windows machine without needing to install Java.
 
