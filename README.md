@@ -68,7 +68,7 @@ The event data saved in a `.csv` file:
 ### 6. **Saving as a Text File (.txt)**  
 The event data can also be saved as a `.txt` file:  
 
-![Saving as TXT](https://raw.githubusercontent.com/Mahdi767/Event-Scheduler/main/Event%20Scheduler/src/saving%20as%20.txt.png)
+![Saving as TXT](https://raw.githubusercontent.com/Mahdi767/Event-Scheduler/main/Event%20Scheduler/src/saving%20as%20txt.png)
 
 ### 7. **Saved as Text File**  
 The saved event data in a `.txt` file format:  
